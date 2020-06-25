@@ -1,0 +1,1 @@
+select round(lat_n,4) median from station s where (select count(id) from station where s.lat_n<lat_n) = (select count(id) from station where s.lat_n>lat_n)
